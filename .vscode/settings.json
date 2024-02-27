@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/82b9766d-aee4-4482-babf-20ff9e671232/microsoft.web/sites/subscriptions/82b9766d-aee4-4482-babf-20ff9e671232/resourceGroups/cronResourceGroup/providers/Microsoft.Web/sites/cronNodeApi",
+    "appService.deploySubpath": "."
+}
