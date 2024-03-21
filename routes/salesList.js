@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
     var options = " Where companyid is not null and ISNULL(Deleted,0) = 0 ";// " where courierReceivedDate is not null and ISNULL(customerGotPayed,0) = 0";
     if (req.query.companyID) {
         if (req.query.companyID != "-1") {
-            options = " where companyID = '" + req.query.companyID + "'";
+            options = " where ISNULL(Deleted,0) = 0 and companyID = '" + req.query.companyID + "'";
         }
     }
 
