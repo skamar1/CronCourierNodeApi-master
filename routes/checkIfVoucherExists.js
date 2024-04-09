@@ -8,7 +8,7 @@ router.get("/", async function (req, res) {
     var id = req.query.id;
 
 
-    var queryStr = "select src.voucher from (values " + id + ") as src(voucher) WHERE NOT EXISTS (select 1 from sales where sales.voucher = src.voucher)";
+    var queryStr = "select src.voucher from (values " + id + ") as src(voucher) WHERE EXISTS (select 1 from sales where sales.voucher = src.voucher)";
     console.log("query = '" + queryStr + "'");
 
     try {
