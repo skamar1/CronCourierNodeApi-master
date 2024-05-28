@@ -1,6 +1,6 @@
 const sql = require('mssql')
 const config = {
-    server: 'couriersqlserver.database.windows.net',
+    server: 'courierDB.database.windows.net',
     authentication: {
         type: 'default',
         options: {
@@ -10,7 +10,7 @@ const config = {
         }
     },
     options: {
-        database: 'courierCronDB',
+        database: 'courierDB',
         rowCollectionOnDone: true,
         useColumnNames: false,
         trustServerCertificate: true
