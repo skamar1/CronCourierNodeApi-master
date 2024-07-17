@@ -20,6 +20,7 @@ router.get('/', async (req, res) => {
     console.log("courierGotPayed = " + req.query.courierGotPayed);
     console.log("invoiced = " + req.query.invoiced);
     console.log("wholesalerid = " + req.query.wholesalerid);
+    console.log("corierID = " + req.query.corierID);
 
     var options = " Where companyid is not null and ISNULL(Deleted,0) = 0 ";// " where courierReceivedDate is not null and ISNULL(customerGotPayed,0) = 0";
     if (req.query.companyID) {
@@ -48,6 +49,14 @@ router.get('/', async (req, res) => {
         console.log("toDate is invalid date");
     }
     console.log("options = '" + options + "'");
+
+    if (req.query.corierID) {
+        if (req.query.corierID == "8") {
+            options += " and courierID < 9 ";
+        } else if (req.query.corierID == "9") {
+            options += " and courierID > 8 ";
+        }
+    }
 
     var isTrueSet = (req.query.isAdmin);
     console.log("isTrueSet = " + isTrueSet);
