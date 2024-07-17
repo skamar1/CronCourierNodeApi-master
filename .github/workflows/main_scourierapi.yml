@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'scourierapi'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_24246C2ECA7646BCA4B61202EAEA86E5 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_439E08540B0C43A78693C9EB5A73FF72 }}
           package: .
