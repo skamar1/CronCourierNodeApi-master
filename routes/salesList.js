@@ -50,10 +50,10 @@ router.get('/', async (req, res) => {
     }
     console.log("options = '" + options + "'");
 
-    if (req.query.corierID) {
-        if (req.query.corierID == "8") {
+    if (req.query.courierID) {
+        if (req.query.courierID == "8") {
             options += " and courierID < 9 ";
-        } else if (req.query.corierID == "9") {
+        } else if (req.query.courierID == "9") {
             options += " and courierID > 8 ";
         }
     }
